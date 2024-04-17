@@ -1,47 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-		<!-- 平行四边形 219970444赵夫新 -->
-        <script type="text/javascript">
-            /*
-            *****
-             *****
-              *****
-               *****
-                *****
-            */
-            for(var i=1;i<=5;i++){
-                   document.write("<br/>");
-                   for(var j=1;j<=i-1;j++) {
-                       document.write(" ");
-                   }
-                   for (var k = 1; k <= 5; k++) {
-                   document.write("*");
-               }
-               }
-        </script>
-		<!-- 三角形 -->
-		 <script type="text/javascript">
-		            /*
-		             *
-		            ***
-		           *****
-		          *******
-		         *********
-		            */
-		            for(var i=1;i<=5;i++){
-		                document.write("<br/>");
-		                for(var j=1;j<=5-i;j++) {
-		                    document.write(" ");
-		                }
-		                for (var k = 1; k <=2*i-1; k++) {
-		                document.write("*");
-		                }
-		            }
-		        </script>
-    </body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shapes Display</title>
+<style>
+body {
+    font-family: 'Courier New', monospace;
+    white-space: pre;
+    font-size: 12px;
+}
+</style>
+</head>
+<body>
+<script>
+function printSpaces(count) {
+    return "&nbsp;".repeat(count);
+}
+for (var i = 1; i <= 5; i++) {
+    document.write(printSpaces(5 - i));
+    document.write("*".repeat(2 * i - 1)); 
+    document.write("<br>");
+}
+document.write("<br>"); 
+for (var i = 1; i <= 5; i++) {
+    document.write(printSpaces(5 - i)); 
+    document.write("*&nbsp;".repeat(5)); 
+    document.write("<br>");
+}
+document.write("<br>"); 
+for (var i = 1; i <= 5; i++) {
+    document.write(printSpaces(5 - i));
+    document.write("*".repeat(2 * i - 1));
+    document.write("<br>");
+}
+// 下半部分
+for (var i = 4; i >= 1; i--) {
+    document.write(printSpaces(5 - i)); 
+    document.write("*".repeat(2 * i - 1)); 
+    document.write("<br>");
+}
+</script>
+</body>
 </html>
